@@ -7,18 +7,35 @@
   color: var(--main-color);
   margin-bottom: 50px;
 }
+@mixin min-mobile {
+  @media screen and (min-width: 320px) {
+    @content;
+  }
+}
 @mixin mobile {
   @media screen and (min-width: 480px) {
-    content: "";
+    @content;
   }
 }
 @mixin tablet {
   @media screen and (min-width: 768px) {
-    content: "";
+    @content;
   }
 }
 @mixin desktop {
   @media screen and (min-width: 1200px) {
-    content: "";
+    @content;
   }
+}
+@mixin visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }

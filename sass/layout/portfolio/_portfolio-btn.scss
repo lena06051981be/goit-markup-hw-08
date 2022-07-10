@@ -24,14 +24,23 @@
     border-radius: 4px;
   }
 }
-.portfolio-btn-list__item:not(:last-child) {
-  margin-right: 8px;
-}
+// .portfolio-btn-list__item:not(:last-child) {
+//   margin-right: 8px;
+// }
 
 .portfolio-btn-list {
-  text-align: center;
-  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 8px;
+  margin-bottom: 40px;
+  @include tablet {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @include desktop {
+    margin-bottom: 50px;
+  }
 }
-ul.portfolio-btn-list li {
-  display: inline-block;
-}
+// ul.portfolio-btn-list li {
+//   display: inline-block;
+// }

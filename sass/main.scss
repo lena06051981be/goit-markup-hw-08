@@ -1,3 +1,4 @@
+@import "./components/mixin";
 @import "./base/common";
 @import "./utils/reset";
 @import "./utils/variables";
@@ -5,7 +6,6 @@
 
 @import "./components/container";
 @import "./components/main-btn";
-@import "./components/mixin";
 
 @import "./layout/header";
 @import "./layout/hero";
@@ -19,4 +19,4 @@
 @import "./layout/portfolio/portfolio-btn";
 @import "./layout/portfolio/projects";
 
-@import "./utils/mark";
+@import "./components/mark";
