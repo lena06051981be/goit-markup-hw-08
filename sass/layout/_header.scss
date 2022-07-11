@@ -94,7 +94,10 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: -32.5px;
+    bottom: -34px;
+    @include desktop {
+      bottom: -32.5px;
+    }
 
     display: block;
     width: 100%;
