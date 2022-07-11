@@ -1,10 +1,21 @@
 .team-section {
   background: var(--description-background-color);
-  padding: 94px 0;
+  padding: 60px 0;
+  @include desktop {
+    padding: 94px 0;
+  }
 }
 
 .team-title {
-  @include hsecond-title();
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+  @include desktop {
+    @include hsecond-title();
+  }
 }
 
 .team-list {

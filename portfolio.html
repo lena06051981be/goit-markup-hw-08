@@ -31,7 +31,7 @@
   </head>
   <body>
     <!-- header -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container">
         <nav class="nav">
           <a href="./index.html" class="logo nav__logo"
@@ -42,7 +42,7 @@
               <a href="./index.html" class="menu__link">Студия</a>
             </li>
             <li class="menu__item">
-              <a href="./portfolio.html" class="menu__link menu__link--stream"
+              <a href="./portfolio.html" class="menu__link + menu__link--stream"
                 >Портфолио</a
               >
             </li>
@@ -77,9 +77,73 @@
             >
           </li>
         </ul>
-        <div></div>
+        <button type="button" class="menu-button-open">
+          <svg class="menu__icon" width="24" height="16">
+            <use href="./images/icons.svg#icon-menu-open"></use>
+          </svg>
+        </button>
+        <div class="mob-modal is-hidden">
+          <div class="mob-modal__container">
+            <button type="button" class="menu-button-close">
+              <svg class="mob-menu__icon" width="40" height="40">
+                <use href="./images/icons.svg#icon-menu-close"></use>
+              </svg>
+            </button>
+            <ul class="mob-menu">
+              <li class="mob-menu__item">
+                <a href="./index.html" class="mob-menu__link">Студия</a>
+              </li>
+              <li class="mob-menu__item">
+                <a
+                  href="./portfolio.html"
+                  class="mob-menu__link mob-menu--stream"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a href="" class="mob-menu__link">Контакты</a>
+              </li>
+            </ul>
+            <div>
+              <ul class="mob-contacts">
+                <li class="mob-contacts__item">
+                  <a
+                    href="tel:+380961111111"
+                    title="Mobile phone"
+                    class="mob-contacts__mobile"
+                  >
+                    +38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mob-contacts__item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    title="E-mail"
+                    class="mob-contacts__email"
+                  >
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="mob-networks">
+                <li class="mob-networks__item">
+                  <a href="" class="mob-networks__link">Instagram </a>
+                </li>
+                <li class="mob-networks__item">
+                  <a href="" class="mob-networks__link">Twitter </a>
+                </li>
+                <li class="mob-networks__item">
+                  <a href="" class="mob-networks__link">Facebook </a>
+                </li>
+                <li class="mob-networks__item">
+                  <a href="" class="mob-networks__link">LinkedIn </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-    </header> -->
+    </header>
     <!-- main -->
     <main>
       <!-- прячем заголовок от пользователя, Google  видит заголовок -->
@@ -107,12 +171,35 @@
             <li class="services__item">
               <a href="" class="services__link">
                 <div class="services__item-wrap">
-                  <img
-                    src="./images/portfolio_services_1.jpg"
-                    alt="Technocarck"
-                    width="370"
-                    class="services__img-portfolio"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/Project1Desk1x.jpg 1x,
+                        ./images/projects/Project1Desk2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project1Tab1x.jpg 1x,
+                        ./images/projects/Project1Tab2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project1Mob1x.jpg 1x,
+                        ./images/projects/Project1Mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/projects/Project1Mob2x.jpg"
+                      alt="Technocrack"
+                      width="450"
+                      class="services__img-portfolio"
+                    />
+                  </picture>
                   <p class="services__item-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -128,12 +215,35 @@
             <li class="services__item">
               <a href="" class="services__link">
                 <div class="services__item-wrap">
-                  <img
-                    src="./images/portfolio_services_2.jpg"
-                    alt="Poster NewOrlean"
-                    width="370"
-                    class="services__img-portfolio"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/Project2Desk1x.jpg 1x,
+                        ./images/projects/Project2Desk2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project2Tab1x.jpg 1x,
+                        ./images/projects/Project2Tab2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project2Mob1x.jpg 1x,
+                        ./images/projects/Project2Mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/projects/Project2Mob2x.jpg"
+                      alt="Poster NewOrlean"
+                      width="450"
+                      class="services__img-portfolio"
+                    />
+                  </picture>
                   <p class="services__item-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -151,12 +261,35 @@
             <li class="services__item">
               <a href="" class="services__link">
                 <div class="services__item-wrap">
-                  <img
-                    src="./images/portfolio_services_3.jpg"
-                    alt="Seafood"
-                    width="370"
-                    class="services__img-portfolio"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/Project3Desk1x.jpg 1x,
+                        ./images/projects/Project3Desk2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project3Tab1x.jpg 1x,
+                        ./images/projects/Project3Tab2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project3Mob1x.jpg 1x,
+                        ./images/projects/Project3Mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/projects/Project3Mob2x.jpg"
+                      alt="Seafood"
+                      width="450"
+                      class="services__img-portfolio"
+                    />
+                  </picture>
                   <p class="services__item-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -172,12 +305,35 @@
             <li class="services__item">
               <a href="" class="services__link">
                 <div class="services__item-wrap">
-                  <img
-                    src="./images/portfolio_services_4.jpg"
-                    alt="Project Prime"
-                    width="370"
-                    class="services__img-portfolio"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/Project4Desk1x.jpg 1x,
+                        ./images/projects/Project4Desk2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project4Tab1x.jpg 1x,
+                        ./images/projects/Project4Tab2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project4Mob1x.jpg 1x,
+                        ./images/projects/Project4Mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/projects/Project4Mob2x.jpg"
+                      alt="Project Prime"
+                      width="450"
+                      class="services__img-portfolio"
+                    />
+                  </picture>
                   <p class="services__item-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -193,12 +349,35 @@
             <li class="services__item">
               <a href="" class="services__link">
                 <div class="services__item-wrap">
-                  <img
-                    src="./images/portfolio_services_5.jpg"
-                    alt="Project Boxes"
-                    width="370"
-                    class="services__img-portfolio"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/Project5Desk1x.jpg 1x,
+                        ./images/projects/Project5Desk2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project5Tab1x.jpg 1x,
+                        ./images/projects/Project5Tab2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project5Mob1x.jpg 1x,
+                        ./images/projects/Project5Mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/projects/Project5Mob2x.jpg"
+                      alt="Project Boxes"
+                      width="450"
+                      class="services__img-portfolio"
+                    />
+                  </picture>
                   <p class="services__item-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -214,12 +393,35 @@
             <li class="services__item">
               <a href="" class="services__link">
                 <div class="services__item-wrap">
-                  <img
-                    src="./images/portfolio_services_6.jpg"
-                    alt="Inspiration"
-                    width="370"
-                    class="services__img-portfolio"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/Project6Desk1x.jpg 1x,
+                        ./images/projects/Project6Desk2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project6Tab1x.jpg 1x,
+                        ./images/projects/Project6Tab2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project6Mob1x.jpg 1x,
+                        ./images/projects/Project6Mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/projects/Project6Mob2x.jpg"
+                      alt="Inspiration"
+                      width="450"
+                      class="services__img-portfolio"
+                    />
+                  </picture>
                   <p class="services__item-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -235,12 +437,35 @@
             <li class="services__item">
               <a href="" class="services__link">
                 <div class="services__item-wrap">
-                  <img
-                    src="./images/portfolio_services_7.jpg"
-                    alt="Limited Edition"
-                    width="370"
-                    class="services__img-portfolio"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/Project7Desk1x.jpg 1x,
+                        ./images/projects/Project7Desk2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project7Tab1x.jpg 1x,
+                        ./images/projects/Project7Tab2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project7Mob1x.jpg 1x,
+                        ./images/projects/Project7Mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/projects/Project7Mob2x.jpg"
+                      alt="Limited Edition"
+                      width="450"
+                      class="services__img-portfolio"
+                    />
+                  </picture>
                   <p class="services__item-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -256,12 +481,35 @@
             <li class="services__item">
               <a href="" class="services__link">
                 <div class="services__item-wrap">
-                  <img
-                    src="./images/portfolio_services_8.jpg"
-                    alt="Project LAB"
-                    width="370"
-                    class="services__img-portfolio"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/Project8Desk1x.jpg 1x,
+                        ./images/projects/Project8Desk2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project8Tab1x.jpg 1x,
+                        ./images/projects/Project8Tab2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project8Mob1x.jpg 1x,
+                        ./images/projects/Project8Mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/projects/Project8Mob2x.jpg"
+                      alt="Project LAB"
+                      width="450"
+                      class="services__img-portfolio"
+                    />
+                  </picture>
                   <p class="services__item-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -277,12 +525,36 @@
             <li class="services__item">
               <a href="" class="services__link">
                 <div class="services__item-wrap">
-                  <img
-                    src="./images/portfolio_services_9.jpg"
-                    alt="Business"
-                    width="370"
-                    class="services__img-portfolio"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/Project9Desk1x.jpg 1x,
+                        ./images/projects/Project9Desk2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project9Tab1x.jpg 1x,
+                        ./images/projects/Project9Tab2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project9Mob1x.jpg 1x,
+                        ./images/projects/Project9Mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/projects/Project9Mob2x.jpg"
+                      alt="Business"
+                      width="450"
+                      class="services__img-portfolio"
+                    />
+                  </picture>
+
                   <p class="services__item-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -299,9 +571,9 @@
         </div>
       </section>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container">
-        <div>
+        <div class="footer__box-address">
           <div class="footer__div-logo">
             <a href="./index.html" class="logo logo--footer"
               ><span class="logo__first">Web</span>Studio
@@ -409,6 +681,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
