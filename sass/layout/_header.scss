@@ -94,7 +94,7 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: -34px;
+    bottom: -34.5px;
     @include desktop {
       bottom: -32.5px;
     }
