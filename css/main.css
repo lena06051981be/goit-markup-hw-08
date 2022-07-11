@@ -821,15 +821,11 @@ h1[class=visually-hidden] {
 .footer .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .footer .container {
     flex-direction: unset;
     flex-wrap: wrap;
-    align-items: unset;
-    justify-content: unset;
   }
 }
 
@@ -909,12 +905,10 @@ h1[class=visually-hidden] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .footer-contacts {
-    justify-content: unset;
     margin-top: 5px;
     margin-bottom: 0;
     margin-left: 165px;
@@ -923,7 +917,6 @@ h1[class=visually-hidden] {
 @media screen and (min-width: 1200px) {
   .footer-contacts {
     align-items: flex-start;
-    justify-content: unset;
     margin-top: 0;
     margin-left: 70px;
     padding-top: 12px;
@@ -975,7 +968,6 @@ h1[class=visually-hidden] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .mailing-list {
@@ -1003,8 +995,6 @@ h1[class=visually-hidden] {
 
 .mailing {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   flex-direction: column;
 }
 @media screen and (min-width: 1200px) {
