@@ -2,9 +2,8 @@
 
 .header {
   border-bottom: 1px solid var(--header-bottom);
-  @include mobile {
-    padding: 10px 0;
-  }
+  padding: 10px 0;
+
   @include tablet {
     padding: 0;
   }
@@ -48,7 +47,9 @@
 }
 .nav__logo {
   color: #000000;
-  margin-right: 88px;
+  @include tablet {
+    margin-right: 88px;
+  }
   @include desktop {
     margin-right: 93px;
   }

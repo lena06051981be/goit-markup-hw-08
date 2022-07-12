@@ -147,11 +147,7 @@ h1[class=visually-hidden] {
 /* header */
 .header {
   border-bottom: 1px solid var(--header-bottom);
-}
-@media screen and (min-width: 480px) {
-  .header {
-    padding: 10px 0;
-  }
+  padding: 10px 0;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -198,7 +194,11 @@ h1[class=visually-hidden] {
 
 .nav__logo {
   color: #000000;
-  margin-right: 88px;
+}
+@media screen and (min-width: 768px) {
+  .nav__logo {
+    margin-right: 88px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .nav__logo {
@@ -448,6 +448,7 @@ h1[class=visually-hidden] {
 .main {
   background: var(--footer-background-color);
   padding: 118px 0;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/HeroMob1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
