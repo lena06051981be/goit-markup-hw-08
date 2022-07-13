@@ -66,7 +66,8 @@
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
 
-  &:hover .modal-icon {
+  &:hover .modal-icon,
+  &:focus .modal-icon {
     transform: rotate(90deg);
     fill: var(--highlight-color);
   }
