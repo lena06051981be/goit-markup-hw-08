@@ -1140,7 +1140,7 @@ h1[class=visually-hidden] {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.modal-close-btn:hover .modal-icon {
+.modal-close-btn:hover .modal-icon, .modal-close-btn:focus .modal-icon {
   transform: rotate(90deg);
   fill: var(--highlight-color);
 }
