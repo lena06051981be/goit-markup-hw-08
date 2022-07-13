@@ -44,6 +44,9 @@
     overflow: auto;
   }
 }
+.mob-menu__icon {
+  transition: transform 0.3s linear, fill 0.3s linear;
+}
 .menu-button-close {
   position: absolute;
   top: 10px;
@@ -51,10 +54,12 @@
   margin: 0;
   padding: 0;
   border: none;
-  background-color: inherit;
-  &:hover,
-  &:focus {
+  background-color: transparent;
+  // fill: black;
+  &:hover .mob-menu__icon,
+  &:focus .mob-menu__icon {
     fill: var(--highlight-color);
+    transform: rotate(90deg);
   }
 
   transition: fill 250ms var(--timing-function);

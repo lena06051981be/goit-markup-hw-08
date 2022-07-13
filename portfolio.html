@@ -663,15 +663,17 @@
         <div class="mailing-list">
           <h3 class="mailing-list__title">Подпишитесь на рассылку</h3>
           <form class="mailing">
-            <label class="mailing__label">
+            <div class="mailing__form">
               <input
                 type="email"
+                id="email"
                 name="footer-email"
-                placeholder="E-mail"
+                placeholder=" "
                 class="mailing__input"
                 required
               />
-            </label>
+              <label class="mailing__label" for="email">E-mail</label>
+            </div>
             <button type="submit" class="main-btn footer-btn">
               Подписаться
               <svg class="footer-btn__icon" width="24" height="24">
@@ -682,6 +684,7 @@
         </div>
       </div>
     </footer>
+
     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

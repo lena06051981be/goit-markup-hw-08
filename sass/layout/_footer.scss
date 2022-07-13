@@ -170,6 +170,11 @@
     flex-direction: unset;
   }
 }
+.mailing__form {
+  position: relative;
+  // width: 100%;
+}
+
 .mailing__input {
   @include min-mobile {
     width: 310px;
@@ -187,22 +192,56 @@
   border-radius: 4px;
   padding-left: 16px;
   color: var(--footer-contact-color);
-  margin-bottom: 20px;
-  @include tablet {
-  }
+  // margin-bottom: 20px;
   @include desktop {
     margin-bottom: 0;
     margin-right: 12px;
   }
+  transition: border-color 250ms var(--timing-function);
+  &:hover + .mailing__label,
+  &:focus + .mailing__label,
+  &:not(:placeholder-shown) + .mailing__label {
+    top: -15%;
+    left: 0;
 
+    font-size: 12px;
+  }
   &:hover,
   &:focus {
     border-color: var(--highlight-color);
   }
-  transition: border-color 250ms var(--timing-function);
+}
+.mailing__label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: all 250ms var(--timing-function),
+    font-size 250ms var(--timing-function);
 }
 
+// .mailing__input:hover + .mailing__label,
+// .mailing__input:focus + .mailing__label,
+// .mailing__input:not(:placeholder-shown) + .mailing__label {
+//   border-color: var(--highlight-color);
+//   top: -15%;
+//   left: 0;
+
+//   font-size: 12px;
+// }
+
 .footer-btn {
+  margin-top: 20px;
+  @include desktop {
+    margin-top: 0;
+  }
   display: flex;
   align-items: center;
   justify-content: center;
